@@ -1,54 +1,16 @@
 <template>
  <HeaderView/>
- <WelcomeView/>
- <IntroductionView/>
- <RulesView/>
- <JudgingCriteria/>
- <FrequentlyAsked/>
- <TimeLine/>
- <PricesAndRewards/>
- <PartnersAndSponsors/>
+ <router-view></router-view>
 </template>
 
 <script>
   import HeaderView from './components/HeaderView.vue'
-  import WelcomeView from './components/WelcomeView.vue'
-  import IntroductionView from './components/IntroductionView.vue'
-  import RulesView from './components/RulesView.vue'
-  import JudgingCriteria from './components/JudgingCriteria.vue'
-  import FrequentlyAsked from './components/FrequentlyAsked.vue'
-  import TimeLine from './components/TimeLine.vue'
-  import PricesAndRewards from './components/PricesAndRewards.vue'
-  import PartnersAndSponsors from './components/PartnersAndSponsors.vue'
 
 export default {
     name: 'App',
     components: {
       HeaderView,
-      WelcomeView,
-      IntroductionView,
-      RulesView,
-      JudgingCriteria,
-      FrequentlyAsked,
-      TimeLine,
-      PricesAndRewards,
-      PartnersAndSponsors
   },
-  // data () {
-  //   return {
-  //     deviceWidth: ""
-  //   }
-  // },
-
-  // methods: {
-  //   getDeviceWidth () {
-  //     this.deviceWidth = window.innerWidth;
-  //   }
-  // },
-
-  // created () {
-  //   this.getDeviceWidth();
-  // }
 }
 </script>
 
@@ -57,6 +19,12 @@ export default {
 @font-face {
         font-family: Montserrat;
         src: url('./assets/fonts/Montserrat-Regular.ttf');
+        font-weight: 700;
+    }
+
+@font-face {
+        font-family: MADE TOMMY Outline;
+        src: url('./assets/fonts/MADE\ TOMMY\ Black\ Outline_PERSONAL\ USE.otf');
         font-weight: 700;
     }
 
@@ -72,22 +40,27 @@ export default {
     font-weight: 700;
 }
 
-html {
-  max-width: 100vw;
-  margin: 0px;
-  padding: 0px;
-}
 
+html {
+  height: 100%;
+  max-width: 100vw;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  /* background-color: #150e28; */
+}
 
 body {
   background-color: #150e28;
-  height: 10000px;
+  height: 100%;
+  /* height: 20000px; */
   background-image: url('./assets/Purple-Lens-Flare-PNG3.png');
   background-position: left top;
   background-repeat: no-repeat;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
+  max-width: 100vw;
+  /* margin-right: 0px;
+  padding-right: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; */
 }
 
 hr {
@@ -95,6 +68,7 @@ hr {
 }
 
 #app {
+  max-width: 100vw;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

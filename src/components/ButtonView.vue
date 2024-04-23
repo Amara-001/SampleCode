@@ -30,5 +30,7 @@ button {
 button:hover {
     background: linear-gradient(270deg,    #FE34B9 0%, #FF26B9 56.42%, #D434FE 99.99%, #903AFF 100%);
     color: yellow;
+    height: 55px;
+    width: 174px;
 }
 </style>

@@ -2,6 +2,9 @@
 node_modules
 /dist
 
+/src/assets/ClashDisplay_Complete
+/src/assets/static
+
 
 # local env files
 .env.local

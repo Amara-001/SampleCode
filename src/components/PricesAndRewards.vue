@@ -1,21 +1,29 @@
 <template>
     <div class="rewards">
+        <div class="right-top">           
+            <p class="reward-title">
+                Prizes and
+                <span>
+                    Rewards
+                </span> 
+            </p>
+            <p class="reward-text">
+                Highlight of prices or rewards for winners and for participants 
+            </p>
+            </div>
         <div class="left-reward">
             <div class="trophy"></div>            
+            <div class="reward-star-br-sm"></div>
         </div>
         <div class="right-reward">
-            <div class="right-top">
-                <p class="reward-title">
-                    Prizes and
-                    <span>
-                        Rewards
-                    </span> 
-                </p>
-                <p class="reward-text">
-                    Highlight of prices or rewards for winners and for participants 
-                </p>
-            </div>
+            <div class="star-pur-sm-1"></div> 
+            <div class="star-pur-sm-2"></div>
+            <div class="reward-star-br-1"></div>
+            <div class="reward-right-flare"></div>           
             <div class="right-bottom">
+                <div class="reward-star-br-2"></div>
+                <div class="reward-star-br-3"></div>
+                <div class="reward-star-lt"></div>
                 <div class="silver">
                     <div class="silver-medal"></div>
                     <div class="silver-box">
@@ -61,7 +69,6 @@
             </div>
         </div>
     </div>
-    <hr/>
 </template>
 
 <script>
@@ -78,6 +85,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+
     }
     
     .left-reward {
@@ -92,9 +101,123 @@
     }
     
     .right-reward {
+        position: relative;
         height: 100%;
         min-width: 60%;
         /* border: solid yellow 1px; */
+    }
+    
+    .reward-right-flare {
+        position: absolute;
+        width: 404px;
+        height: 959px;
+        flex-shrink: 0;
+        background-image: url('../assets/Purple-Lens-Flare-PNG\ Reward-Right.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-blend-mode: hard-light;
+        margin-left: 50%;
+        margin-top: 40%;
+        z-index: -1;
+    }
+
+    .star-pur-sm-1 {
+        position: absolute;
+        width: 21px;
+        height: 25px;
+        flex-shrink: 0;
+        margin-left: -38%;
+        margin-top: 12%;
+        background-image: url('../assets/sata\ gra.png');
+        background-size: contain;
+        background-blend-mode: hard-light;
+        
+    }
+    
+    .star-pur-sm-2 {
+        position: absolute;
+        width: 21px;
+        height: 25px;
+        flex-shrink: 0;
+        margin-top: 18%;
+        margin-left: 65%;
+        z-index: -1;
+        background-image: url('../assets/sata\ gra.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-blend-mode: hard-light;
+        
+    }
+    
+    .reward-star-br-1 {
+        position: absolute;
+        height: 32px;
+        width: 26px;
+        flex-shrink: 0;
+        margin-top: 75%;
+        margin-left: -12%;
+        background-image: url('../assets/star.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-blend-mode: hard-light;
+        
+        
+    }
+    
+    .reward-star-br-2 {
+        position: absolute;
+        height: 32px;
+        width: 26px;
+        flex-shrink: 0;
+        margin-top: -70%;
+        margin-left: -70%;
+        background-image: url('../assets/star.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-blend-mode: hard-light;
+        
+        
+    }
+    
+    .reward-star-br-3 {
+        position: absolute;
+        height: 32px;
+        width: 26px;
+        flex-shrink: 0;
+        margin-top: -45%;
+        margin-left: 95%;
+        background-image: url('../assets/star.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-blend-mode: hard-light;
+    }
+    
+    .reward-star-lt {
+        position: absolute;
+        height: 32px;
+        width: 26px;
+        flex-shrink: 0;
+        margin-top: 70%;
+        margin-left: 33%;
+        background-image: url('../assets/star\ \(1\).png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-blend-mode: hard-light;
+        
+    }
+
+    .reward-star-br-sm {
+    position: absolute;
+    width: 15px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 5%;
+    margin-left: 15%;
+    background-image: url('../assets/star-br-sm.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: hard-light;
+
     }
 
     .trophy {
@@ -233,6 +356,8 @@
     .right-top {
         height: 30%;
         width: 100%;
+        position: absolute;
+        margin-left: 40%;
     }
 
     .right-bottom {
@@ -240,9 +365,9 @@
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        height: 70%;
+        height: 80%;
         width: 100%;
-        margin-top: -60px;
+        margin-top: 20%;
     }
 
     .reward-title {
@@ -268,6 +393,9 @@
     }
 
     .reward-text {
+        width: 401px;
+        height: 51px;
+        flex-shrink: 0;
         color: #FFF;
         font-family: Montserrat;
         font-size: 14px;

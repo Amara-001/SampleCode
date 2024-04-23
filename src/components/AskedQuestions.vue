@@ -1,9 +1,9 @@
 <template>
     <div v-for="question in this.questions" :key="question.id" class="expandable-questions">
-        <div class="question-container">
+        <div @click="handleExpandClick(question.id)" class="question-container">
             <div class="main-question">
                 <p  :class="question.showAnswer ? 'the-read-question' : 'the-question'">{{ question.data }}</p>
-                <p @click="handleExpandClick(question.id)" class="expand-btn">{{ question.showAnswer ? "-" : "+" }}</p>
+                <p  class="expand-btn">{{ question.showAnswer ? "-" : "+" }}</p>
             </div>
             <div v-show="question.showAnswer" class="answer-to-question">{{ question.answer }}</div>
         </div>        
@@ -110,6 +110,7 @@
     
     .question-container {
         border-bottom: solid #D434FE 1px;
+        cursor: pointer;
     }
 
     .expand-btn {

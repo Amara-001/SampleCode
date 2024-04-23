@@ -26,7 +26,6 @@
             <div class="star-purple"></div>
         </div>
     </div>
-    <hr/>
 </template>
 
 <script>
@@ -47,6 +46,8 @@
         max-width: 100%;
         margin-top: 5px;
         margin-bottom: 0px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+
 
     }
 
@@ -152,5 +153,23 @@
         position: absolute;
         margin-top: -280px;
         margin-left: 85%;
+    }
+
+    @media screen and (max-width: 746px) {
+        .intro {
+            display: block;
+            max-width: 100vw;
+            height: fit-content;
+            /* text-align: center; */
+        }
+
+        .left-intro {
+            max-width: 100vw;
+        }
+
+        .right-intro {
+            max-width: 100vw;
+        }
+        
     }
 </style>

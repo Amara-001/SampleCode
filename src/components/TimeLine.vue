@@ -26,6 +26,9 @@
                 </div>
             </div>
             <div class="right-details">
+                <div class="star-time-pur"></div>
+                <div class="star-time-br"></div>
+                <div class="star-time-lt"></div>
                 <div v-for="item in rightData" :key="item.id" class="left-item-container">
                     <p class="item-title-right">{{ item.textTitle }}</p>
                     <p class="item-text-right">{{ item.textDetail }}</p>
@@ -33,7 +36,6 @@
             </div>
         </div>
     </div>
-    <hr/>
 </template>
 
 <script>
@@ -119,6 +121,8 @@
         height: 1880px;
         max-width: 100%;
         /* border: solid yellow 1px; */
+        border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+
     }
     
     .time-line-title {
@@ -187,8 +191,45 @@
     .right-details {
         height: 100%;
         min-width: 45%;
+        position: relative;
         /* border: solid yellow 1px; */
 
+    }
+
+    .star-time-pur {
+        position: absolute;
+        width: 30px;
+        height: 36px;
+        flex-shrink: 0;
+        margin-left: -90%;
+        margin-top: -10%;
+        background-image: url('../assets/star\ pu.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .star-time-br {
+        position: absolute;
+        width: 26px;
+        height: 32px;
+        flex-shrink: 0;
+        margin-top: 135%;
+        margin-left: 75%;
+        background-image: url('../assets/star.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .star-time-lt {
+        position: absolute;
+        width: 26px;
+        height: 32px;
+        flex-shrink: 0;
+        margin-top: 292%;
+        margin-left: -105%;
+        background-image: url('../assets/star\ \(1\).png');
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 
     .line {

@@ -1,6 +1,12 @@
 <template>
     <div class="rules">
+        <div class="rules-right">
+            <div class="rules-right-flare"></div>
+            <div class="star-br"></div>
+            <div class="rules-img"></div>
+        </div>
         <div class="rules-left">
+            <div class="rules-left-flare"></div>
             <div class="star-lt"></div>
             <p class="rules-title">
                 Rules and <br/> 
@@ -15,12 +21,7 @@
                 that's what we're all about!
             </p>
         </div>
-        <div class="rules-right">
-            <div class="star-br"></div>
-            <div class="rules-img"></div>
-        </div>
     </div>
-    <hr/>
 </template>
 
 <script>
@@ -37,8 +38,10 @@
     height: 537px;
     max-width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+
 }
 
 .rules-left {
@@ -51,6 +54,32 @@
     min-height: 100%;
     min-width: 50%;
     position: relative;
+}
+
+.rules-left-flare {
+    position: absolute;
+    margin-top: -40%;
+    margin-left: -15%;
+    z-index: -1;
+    width: 1037px;
+    height: 948px;
+    flex-shrink: 0;
+    background-image: url('../assets/Purple-Lens-Flare-PNG\ Rules.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rules-right-flare {
+    position: absolute;
+    width: 404px;
+    height: 959px;
+    flex-shrink: 0;
+    z-index: -1;
+    margin-top: -15%;
+    margin-left: 37%;
+    background-image: url('../assets/Purple-Lens-Flare-PNG\ Rules.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .rules-title {
@@ -115,5 +144,13 @@
     position: absolute;
     margin-left: 5%;
     margin-top: 400px;
+}
+
+@media screen and (max-width: 746px) {
+    .rules {
+        display: block;
+        max-width: 100vw;
+        height: fit-content;
+    }    
 }
 </style>

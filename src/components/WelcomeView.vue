@@ -6,12 +6,15 @@
         <div class="bottom-block">
             <div class="left-block">
                 <div class="star"></div>
-                <div class="bulb"></div>
-                <div class="chain"></div>
-                <div class="fire-star"></div>
-                <div class="text-title">
-                    <p class="gl-tech">getlinked Tech</p>
-                    <p class="hackathon">Hackthon <span class="hct-1">1.0</span></p>
+                <div class="star-lt-1"></div>
+                <div class="get-linked-contain">
+                    <div class="bulb"></div>
+                    <div class="chain"></div>
+                    <div class="fire-star"></div>
+                    <div class="text-title">
+                        <p class="gl-tech">getlinked Tech</p>
+                        <p class="hackathon">Hackthon <span class="hct-1">1.0</span></p>
+                </div>
                     <p class="gl-message">
                         Participate in getlinked tech Hackathon 2023 stand 
                         a chance to win a Big prize
@@ -27,11 +30,11 @@
                 </div>
             </div>
             <div class="right-block">
+                <div class="star-lt-2"></div>
                 <div class="glow-web"></div>
             </div>
         </div>
     </div>
-    <hr/>
 </template>
 
 <script>
@@ -81,16 +84,37 @@
     background-repeat: no-repeat;
 }
 
+.star-lt-1 {
+    position: absolute;
+    width: 26px;
+    height: 32px;
+    background-image: url('../assets/star-lt-sm.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 75%;
+    margin-top: 80%;
+}
+.star-lt-2 {
+    position: absolute;
+    width: 26px;
+    height: 32px;
+    background-image: url('../assets/star-lt-sm.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: -85%;
+    margin-top: -99%;
+}
+
 .gl-tech {
     color: #FFF;
     margin: -15px;
     top: 0;
     bottom: 0;
-font-family: Clash Display;
-font-size: 70px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    font-family: Clash Display;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .gl-message {
@@ -98,11 +122,11 @@ line-height: normal;
     margin: 0;
     height: 66px;
     width: 522px;
-font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 166%; /* 33.2px */
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166%; /* 33.2px */
 }
 
 .hackathon {
@@ -110,11 +134,11 @@ line-height: 166%; /* 33.2px */
     margin: 0;
     top: 0;
     bottom: 0;
-font-family: Clash Display;
-font-size: 70px;
-font-style: normal;
-font-weight: 700;
-/* line-height: normal; */
+    font-family: Clash Display;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    /* line-height: normal; */
 
 }
 
@@ -176,19 +200,20 @@ text-align: right;
     /* position: relative; */
     height: 650px;
     max-width: 100%;
-    margin: auto;
+    /* margin: auto; */
     margin-bottom: -10px;
     margin-top: 35px;
     background-image: url('../assets/metrix\ 1.png');
     background-repeat: no-repeat;
+    background-size: contain;
     padding-left: 1%;
-    /* border-bottom: solid white 1px; */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 .top-block {
     display: flex;
     flex-direction: row;
-    min-height: 10%;
+    max-height: 10%;
     max-width: 98%;
     background-image: url('../assets/Vector\ 4.png');
     background-repeat: no-repeat;
@@ -197,7 +222,7 @@ text-align: right;
 }
 
 .bottom-block {
-    min-height: 100%;
+    max-height: 90%;
     max-width: 98%;
     position: relative;
     display: flex;
@@ -212,11 +237,13 @@ text-align: right;
     min-height: 100%;
     overflow: overflow;
     display: block;
+    position: relative;
 
 }
 
 .right-block {
     display: flex;
+    position: relative;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -245,67 +272,45 @@ text-align: right;
     margin-top: 30px;
 }
 
-hr {
-    top: 0;
-}
 
-@media  screen  and (max-width: 414px) {
+@media  screen  and (max-width: 746px) {
     .bottom-block {
-        flex-direction: column;
+        max-width: 100%;
+        display: block;
+        align-items: center;
     }
 
     .right-block {
-        min-width: 100%;
+        max-width: 100%;
         background-size: contain;
     }
 
     .left-block {
-        min-width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
+    .button-div {
+        align-item: center;
+    }
+
+    #get-link-div {
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-div {
+        text-align: center;
+    }
+
+    .get-linked-contain {
+        text-align: center;
+    }
     
-.gl-tech {
-    width: 269px;
-height: 37px;
-flex-shrink: 0;
-    color: #FFF;
-font-family: Clash Display;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
-
-.gl-message {
-    color: #FFF;
-text-align: center;
-font-family: Montserrat;
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: 166%; /* 21.58px */
-}
-
-.hackathon {
-    width: 281px;
-height: 37px;
-flex-shrink: 0;
-    color: #FFF;
-font-family: Clash Display;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
-
-.hct-1 {
-    color: #D434FE;
-font-family: Clash Display;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
 
 }
 </style>

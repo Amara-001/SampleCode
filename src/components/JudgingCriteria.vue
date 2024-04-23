@@ -45,7 +45,6 @@
            <button class="read-more-btn">Read More</button>
         </div>
     </div>
-    <hr/>
 </template>
 
 <script>
@@ -64,6 +63,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+
     }
 
     .criteria-left {
@@ -137,6 +138,7 @@
         background-image: url('../assets/Purple-Lens-Flare-PNG4.png');
         background-repeat: no-repeat;
         background-size: cover;
+        background-blend-mode: hard-light;
         z-index: -1;
         margin-top: 217px;
         margin-left: -150px;
@@ -150,6 +152,7 @@
         background-image: url('../assets/Purple-Lens-Flare-PNG5.png');
         background-repeat: no-repeat;
         background-size: cover;
+        background-blend-mode: hard-light;
         z-index: -1;
         margin-left: -20px;
         margin-top: 400px;
@@ -216,5 +219,24 @@
     .read-more-btn:hover {
         background: linear-gradient(270deg,    #FE34B9 0%, #FF26B9 56.42%, #D434FE 99.99%, #903AFF 100%);
         color: yellow;
+        height: 55px;
+        width: 174px;
+    }
+
+    @media screen and (max-width: 746px) {
+        .criteria {
+            display: block;
+            max-width: 100vw;
+            height: fit-content;
+        }
+
+        .criteria-left {
+            max-width: 100vw;
+        }
+
+        .criteria-right {
+            max-width: 100vw;
+        }
+        
     }
 </style>
