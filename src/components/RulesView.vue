@@ -22,6 +22,7 @@
             </p>
         </div>
     </div>
+    <hr/>
 </template>
 
 <script>
@@ -34,32 +35,174 @@
 </script>
 
 <style scoped>
-.rules {
-    height: 537px;
-    max-width: 100%;
+@media screen and (min-width: 320px) {
+    .rules {
+    height: 698.1px;
+    width: 310px;
+    margin-left: calc((100% - 310px)/2);
     display: flex;
-    flex-direction: row-reverse;
+    /* border: solid red 1px; */
+    flex-direction: column;
     justify-content: space-between;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+    /* border-bottom: 2px solid rgba(255, 255, 255, 0.18); */
 
 }
 
 .rules-left {
-    min-height: 100%;
-    min-width: 50%;
+    height: 349.05px;
+    width: 310px;
+    /* border: solid blue 1px; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; */
     position: relative;
 }
 
 .rules-right {
-    min-height: 100%;
-    min-width: 50%;
+    height: 349.05px;
+    width: 310px;
+    /* border: solid green 1px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 .rules-left-flare {
     position: absolute;
-    margin-top: -40%;
-    margin-left: -15%;
+    margin-top: -124px;
+    margin-left: -46.5px;
+    z-index: -1;
+    /* width: 1037px; */
+    width: 324.06px;
+    /* height: 948px; */
+    height: 296.25px;
+    flex-shrink: 0;
+    background-image: url('../assets/Purple-Lens-Flare-PNG\ Rules.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rules-right-flare {
+    position: absolute;
+    width: 404px;
+    /* width: 126.25px; */
+    height: 959px;
+    /* height: 299.69px; */
+    flex-shrink: 0;
+    z-index: -1;
+    /* margin-top: -15%; */
+    margin-top: 104.72px;
+    /* margin-left: 37%; */
+    margin-left: 96.88px;
+    background-image: url('../assets/Purple-Lens-Flare-PNG\ Rules.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rules-title {
+    height: 60px;
+    width: 300px;
+    text-align: center;
+    /* border: solid red 1px; */
+    color: #FFF;
+    font-family: Clash Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: calc((100% - 300px)/2);
+
+}
+
+.rules-title span {
+    color: var(--violet);
+    font-family: Clash Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.rules-text {
+    height: 165px;
+    width: 280px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: calc((100% - 280px)/2);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 196.429% */
+}
+
+.rules-img {
+    height: 300px;
+    width: 300px;
+    background-image: url('../assets/7450159\ 1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.star-lt {
+    height: 32px;
+    width: 26px;
+    position: absolute;
+    background-image: url('../assets/star\ \(1\).png');
+    background-repeat: no-repeat;
+    margin-left: 50%;
+    margin-top: 85px;
+}
+
+.star-br {
+    height: 32px;
+    width: 26px;
+    background-image: url('../assets/star.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 400px;
+}   
+}
+
+@media screen and (min-width: 672px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .rules {
+    height: 537px;
+    width: 1024px;
+    display: flex;
+    /* border: solid red 1px; */
+    margin-left: calc((100% - 1024px)/2);
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    /* border-bottom: 2px solid rgba(255, 255, 255, 0.18); */
+
+}
+
+.rules-left {
+    height: 537px;
+    width: 512px;
+    position: relative;
+}
+
+.rules-right {
+    height: 537px;
+    width: 512px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules-left-flare {
+    position: absolute;
+    margin-top: -409.6px;
+    margin-left: -153.6px;
     z-index: -1;
     width: 1037px;
     height: 948px;
@@ -75,8 +218,8 @@
     height: 959px;
     flex-shrink: 0;
     z-index: -1;
-    margin-top: -15%;
-    margin-left: 37%;
+    margin-top: -153.6px;
+    margin-left: 378.88px;
     background-image: url('../assets/Purple-Lens-Flare-PNG\ Rules.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,9 +232,10 @@
     color: #FFF;
     font-family: Clash Display;
     font-size: 32px;
-    margin-left: 10%;
+    margin-left: 51.2px;
     font-style: normal;
     font-weight: 700;
+    text-align: left;
 
 }
 
@@ -105,11 +249,11 @@
 
 .rules-text {
     height: 165px;
-    width: 535px;
-    margin-left: 10%;
+    width: 440px;
+    margin-left: 51.2px;
     color: #FFF;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 27.5px; /* 196.429% */
@@ -122,8 +266,8 @@
     background-image: url('../assets/7450159\ 1.png');
     background-repeat: no-repeat;
     background-size: contain;
-    margin-left: 12.5%;
-    margin-top: 30px;
+    /* margin-left: 12.5%;
+    margin-top: 30px; */
 }
 
 .star-lt {
@@ -145,12 +289,6 @@
     margin-left: 5%;
     margin-top: 400px;
 }
-
-@media screen and (max-width: 746px) {
-    .rules {
-        display: block;
-        max-width: 100vw;
-        height: fit-content;
-    }    
 }
+
 </style>
